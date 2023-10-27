@@ -1,9 +1,9 @@
 let etoile =0
 do
 {
-    etoile= prompt(`Veuillez saisir le nombre d'étoiles que vous voulez`)
+    etoile= parseInt(prompt(`Veuillez saisir le nombre d'étoiles que vous voulez`));
 }
-while(etoile<1 && etoile>11)
+while((isNaN(etoile))||(etoile<1) || (etoile>11))
 // entr 1 et 11
 let texte = "";
 
@@ -11,3 +11,14 @@ let texte = "";
         texte = texte+"*"
     }
     console.log(`${texte}`);
+
+//    
+// à la place de while, vérifier la saisie:
+// 
+//let mauvaiseSaisie=true
+//do {
+//mauvaiseSaisie = (isNaN(etoile)||(etoile<1)||(etoile>1));
+//etoile = parseInt(prompt(`nb etoiles?`))
+//if (mauvaiseSaisie)
+//    console.log(`le nombre d'étoiles n'est pas correct`);
+//}
